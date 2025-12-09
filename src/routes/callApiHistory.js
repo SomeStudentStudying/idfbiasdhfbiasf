@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { addRequestData, getRequestData } from "./historyService.js";
+import { addRequestData, getRequestData } from "../utils/requestHistory.js";
 
 export default async function registerCallApiHistory(app) {
 
