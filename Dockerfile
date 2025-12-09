@@ -1,7 +1,7 @@
 FROM ollama/ollama:latest
 
 # Copier ton fichier modèle
-COPY ./models/Model /models/Model
+COPY ./ollama-models/Modelfile /models/Model
 
 # Télécharger Llama3
 RUN ollama pull llama3
