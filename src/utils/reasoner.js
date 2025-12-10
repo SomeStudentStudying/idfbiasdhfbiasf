@@ -2,7 +2,7 @@ export default async function reasonerRoutes(app) {
     /**
      * Test route to verify Llama integration
      */
-    const RUNPOD_URL = "http://69.30.85.204:11434/api/generate"; //"https://<pod-id>-11434.proxy.runpod.net/api/generate";
+    const RUNPOD_URL = "http://69.30.85.69:11434/api/generate"; //"https://<pod-id>-11434.proxy.runpod.net/api/generate";
     
     app.get("/test", async (req, reply) => {
         try {
