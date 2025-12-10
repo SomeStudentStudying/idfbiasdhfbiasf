@@ -2,9 +2,11 @@ export default async function reasonerRoutes(app) {
     /**
      * Test route to verify Llama integration
      */
+    const RUNPOD_URL = "http://localhost:11434/api/generate"; //"https://<pod-id>-11434.proxy.runpod.net/api/generate";
+    
     app.get("/test", async (req, reply) => {
         try {
-            const response = await fetch("http://localhost:11434/api/generate", {
+            const response = await fetch(RUNPOD_URL, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -30,7 +32,7 @@ export default async function reasonerRoutes(app) {
 }
 
 async function reasoneParkingSign(input) {
-    const response = await fetch("http://localhost:11434/api/generate", {
+    const response = await fetch("RUNPOD_URL", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
